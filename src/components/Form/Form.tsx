@@ -45,8 +45,7 @@ const FormComponent: React.FC = () => {
         multiline
         value={description}
         onChange={(_, newValue) => handleDescriptionChange(newValue)}
-        rows={4}
-        style={{ marginTop: '1rem' }}/>
+        rows={4} vir/>
 
       <div style={{ display: 'flex', justifyContent: 'center', marginTop: '1rem' }}>
         <PrimaryButton type="submit">Enviar</PrimaryButton>

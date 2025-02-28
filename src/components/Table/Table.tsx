@@ -71,7 +71,7 @@ const TableComponent: React.FC = () => {
       </div>
 
       <div style={{ maxWidth: '600px', margin: '0 auto' }}>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4" id="form">
           <TextField 
             label="Nombre" 
             value={newName} 
@@ -98,14 +98,12 @@ const TableComponent: React.FC = () => {
             onChange={(_, newValue) => setNewCycle(newValue || '')} 
             styles={{ subComponentStyles: { label: labelStyles } }}
           />
-          <div id="hola">
           <DatePicker
             id="date1"
             label="Fecha Inicio"
             placeholder="Selecciona una fecha"
             value={newStartDate}
             onSelectDate={(date) => setNewStartDate(date || undefined)}
-            styles={{ root: { color: 'white' } }}  // Correct styling applied here
           />
           <DatePicker
             id="date2"
@@ -113,10 +111,7 @@ const TableComponent: React.FC = () => {
             placeholder="Selecciona una fecha"
             value={newEndDate}
             onSelectDate={(date) => setNewEndDate(date || undefined)}
-            styles={{ root: { color: 'white' } }}  // Correct styling applied here
-          />
-          </div>
-          
+          />         
         </div>
 
         <div style={{ display: 'flex', justifyContent: 'center', marginTop: '20px' }}>
